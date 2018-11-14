@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9wJ-Ie-YKH">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Helvetica.ttc">
+            <string>Helvetica</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Page A-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Assignment_3PAP" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xed-hQ-MC3">
+                                <rect key="frame" x="16" y="64" width="343" height="370"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="370" id="o47-cP-G9b"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ToO-6x-Exv">
+                                <rect key="frame" x="16" y="442" width="343" height="205"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="xed-hQ-MC3" firstAttribute="trailing" secondItem="ToO-6x-Exv" secondAttribute="trailing" id="1It-GW-mlB"/>
+                            <constraint firstItem="xed-hQ-MC3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="2CI-Pa-AoV"/>
+                            <constraint firstItem="xed-hQ-MC3" firstAttribute="leading" secondItem="ToO-6x-Exv" secondAttribute="leading" id="4Cv-6S-fNF"/>
+                            <constraint firstItem="xed-hQ-MC3" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="a8s-0E-Rrw"/>
+                            <constraint firstItem="xed-hQ-MC3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ahg-as-vOd"/>
+                            <constraint firstAttribute="bottom" secondItem="ToO-6x-Exv" secondAttribute="bottom" constant="20" symbolic="YES" id="jvm-Mj-c07"/>
+                            <constraint firstItem="ToO-6x-Exv" firstAttribute="top" secondItem="xed-hQ-MC3" secondAttribute="bottom" constant="8" symbolic="YES" id="zhj-oU-JLp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Page A" id="xN3-b6-IpP">
+                        <barButtonItem key="leftBarButtonItem" title="Choice A" id="Kz0-mH-iPa">
+                            <connections>
+                                <action selector="navButtonActionA:" destination="BYZ-38-t0r" id="JSO-Mq-06X"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Choice B" id="vOZ-nM-iE8">
+                            <connections>
+                                <action selector="navButtonActionB:" destination="BYZ-38-t0r" id="a3w-Oq-65t"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="imgView" destination="ToO-6x-Exv" id="4Ve-xh-N4t"/>
+                        <outlet property="navButtonChoiceA" destination="Kz0-mH-iPa" id="35F-ey-UKc"/>
+                        <outlet property="navButtonChoiceB" destination="vOZ-nM-iE8" id="3bu-KR-p72"/>
+                        <outlet property="navItem" destination="xN3-b6-IpP" id="Lku-dJ-ivh"/>
+                        <outlet property="pageTextView" destination="xed-hQ-MC3" id="ha6-e5-jLq"/>
+                        <segue destination="1NS-NU-M7r" kind="show" identifier="showPageB" id="7BY-ic-Gwo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="472.80000000000001" y="125.4872563718141"/>
+        </scene>
+        <!--Page B-->
+        <scene sceneID="B2E-fW-Ip2">
+            <objects>
+                <viewController id="1NS-NU-M7r" customClass="ViewController2" customModule="Assignment_3PAP" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eN6-0N-fIn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o0w-Tj-WCg">
+                                <rect key="frame" x="16" y="64" width="343" height="374"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8k8-oi-Wbu">
+                                <rect key="frame" x="16" y="446" width="343" height="201"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="201" id="9OV-sC-J6d"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="o0w-Tj-WCg" firstAttribute="trailing" secondItem="8k8-oi-Wbu" secondAttribute="trailing" id="8qz-Eg-Qxf"/>
+                            <constraint firstItem="o0w-Tj-WCg" firstAttribute="leading" secondItem="8k8-oi-Wbu" secondAttribute="leading" id="OjG-C4-7Gv"/>
+                            <constraint firstItem="o0w-Tj-WCg" firstAttribute="leading" secondItem="eN6-0N-fIn" secondAttribute="leadingMargin" id="UD3-qc-AaZ"/>
+                            <constraint firstItem="o0w-Tj-WCg" firstAttribute="trailing" secondItem="eN6-0N-fIn" secondAttribute="trailingMargin" id="VUl-uX-G5J"/>
+                            <constraint firstAttribute="bottom" secondItem="8k8-oi-Wbu" secondAttribute="bottom" constant="20" symbolic="YES" id="fUI-92-78z"/>
+                            <constraint firstItem="8k8-oi-Wbu" firstAttribute="top" secondItem="o0w-Tj-WCg" secondAttribute="bottom" constant="8" symbolic="YES" id="iuQ-OD-kNP"/>
+                            <constraint firstItem="o0w-Tj-WCg" firstAttribute="top" secondItem="iPt-iO-6Ja" secondAttribute="top" id="mw6-9Z-B0w"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="iPt-iO-6Ja"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Page B" id="cUM-aM-iim">
+                        <barButtonItem key="leftBarButtonItem" title="Choice A" id="Yur-Ip-Dbp">
+                            <connections>
+                                <action selector="navButtonActionA:" destination="1NS-NU-M7r" id="ETY-em-gV4"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Choice B" id="Bze-4d-uY8">
+                            <connections>
+                                <action selector="navButtonActionB:" destination="1NS-NU-M7r" id="2BG-x8-hp4"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="imgView" destination="8k8-oi-Wbu" id="Egx-tF-45a"/>
+                        <outlet property="navButtonChoiceA" destination="Yur-Ip-Dbp" id="1rR-7m-e2T"/>
+                        <outlet property="navButtonChoiceB" destination="Bze-4d-uY8" id="Taa-pK-YgI"/>
+                        <outlet property="navItem" destination="cUM-aM-iim" id="97C-vC-gZz"/>
+                        <outlet property="pageTextView" destination="o0w-Tj-WCg" id="xS2-vQ-lsL"/>
+                        <segue destination="8NA-cQ-7Q6" kind="show" identifier="showPageC" id="Rv0-qK-WWc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Teb-cF-0V0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1245.5999999999999" y="124.58770614692655"/>
+        </scene>
+        <!--Page C-->
+        <scene sceneID="cLD-f3-TQX">
+            <objects>
+                <viewController id="8NA-cQ-7Q6" customClass="ViewController3" customModule="Assignment_3PAP" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dDJ-K1-BuY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2kf-Wf-glP">
+                                <rect key="frame" x="16" y="64" width="343" height="370"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BZV-ge-6rz">
+                                <rect key="frame" x="16" y="442" width="343" height="205"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="205" id="RDh-DP-I8f"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2kf-Wf-glP" firstAttribute="trailing" secondItem="BZV-ge-6rz" secondAttribute="trailing" id="Cld-vT-nSc"/>
+                            <constraint firstAttribute="bottom" secondItem="BZV-ge-6rz" secondAttribute="bottom" constant="20" symbolic="YES" id="Ihi-dk-vIl"/>
+                            <constraint firstItem="2kf-Wf-glP" firstAttribute="leading" secondItem="BZV-ge-6rz" secondAttribute="leading" id="Uwh-eh-ksp"/>
+                            <constraint firstItem="2kf-Wf-glP" firstAttribute="top" secondItem="U9b-FN-fMd" secondAttribute="top" id="WEI-FC-ydO"/>
+                            <constraint firstItem="2kf-Wf-glP" firstAttribute="trailing" secondItem="dDJ-K1-BuY" secondAttribute="trailingMargin" id="Z3M-YV-ac9"/>
+                            <constraint firstItem="BZV-ge-6rz" firstAttribute="top" secondItem="2kf-Wf-glP" secondAttribute="bottom" constant="8" symbolic="YES" id="ff4-uj-Shz"/>
+                            <constraint firstItem="2kf-Wf-glP" firstAttribute="leading" secondItem="dDJ-K1-BuY" secondAttribute="leadingMargin" id="wsZ-r0-Ixu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="U9b-FN-fMd"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Page C" id="8P4-kX-wSM">
+                        <barButtonItem key="leftBarButtonItem" title="Restart" id="vcU-La-xTM">
+                            <connections>
+                                <action selector="restartButton:" destination="8NA-cQ-7Q6" id="jQh-gM-ts8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="imgView" destination="BZV-ge-6rz" id="pOd-Gv-M9V"/>
+                        <outlet property="navItem" destination="8P4-kX-wSM" id="QUf-QF-sR8"/>
+                        <outlet property="pageTextView" destination="2kf-Wf-glP" id="fTc-un-LXy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bOg-p9-GDV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2000.8" y="124.58770614692655"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="idU-Mj-QI3">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9wJ-Ie-YKH" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Q3E-Mo-UVQ">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="aKm-Yw-Txu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="07M-og-NEA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-260" y="125"/>
+        </scene>
+    </scenes>
+</document>
